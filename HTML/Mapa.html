@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+
+<!--INFORMACION GENERAL DE LA PAGINA-->
+
+<head>
+    <!-- Seleccion del tipo de caracteres -->
+    <meta charset="utf-8">
+    <!-- Autor del proyecto Juan Diego Bencardino Perdomo -->
+    <meta name="author" content="Juan Diego Bencardino Perdomo">
+    <!-- Descripción del contenido de la página -->
+    <meta name="description" content="Inmobiliaria MALU Colombia, Mapa">
+    <!-- selección del lenguaje de la página, para mayor eficiencia en busquedas -->
+    <meta lang="es">
+    <!-- Línea para que funcione la página en dispositivos móviles -->
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+    <!-- Título de la página que muestre de qué es el contenido -->
+    <title>MALU inmobiliaria, Mapa</title>
+    <!-- Link a la hoja de estilos que está en la carpeta de estilos -->
+    <link href="../Estilos/styles.css" rel="stylesheet" type="text/css">
+    <!-- Link a la hoja de estilos que permite usar los iconos de la página -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- link para utilizar Jquery, esta solo se va a utilizar para mostrar y ocultar el menú de navegación para las panatallas de tamaño pequeño -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- link para el icono que acompañará al título en la pestaña de la página -->
+    <link href="../Imagenes/casita.ico" rel="icon" type="image/x-icon">
+</head>
+
+<!--CUERPO DE LA PAGINA-->
+
+<!-- dentro del header va a ir solo el nombre de la empresa -->
+<header>
+    <!-- Nombre de la empresa, en mayúscula, con el símbolo de marca registrada -->
+    <h1 id="MALU">
+        <!-- cada letra tiene un id diferente para que pueda tener un color diferente, se usa la etiqueta strong para hacer la letra más grande -->
+        <strong id="M">M</strong><strong id="A">A</strong><strong id="L">L</strong><strong id="U">Ú</strong> &reg;
+    </h1>
+    <!-- continuación del nombre, con un h2, para que sea más pequeño -->
+    <h3>Colombia Inmobiliaria</h3>
+</header>
+<!-- después del header se pone el elemento de navegación, es el mismo para todas las páginas -->
+<nav class="menu">
+    <!-- este elemento va a tener una lista no ordenada -->
+    <ul>
+        <!-- cada elemento de lista va a estar rodeado por un link para poder navegar entre páginas -->
+        <a href="index.html">
+            <!-- link al inicio -->
+            <li class="par">Inicio</li>
+        </a>
+        <a href="Inmuebles.html">
+            <!-- link a los inmuebles -->
+            <li class="impar">Inmuebles</li>
+        </a>
+        <a href="Historia.html">
+            <!-- link a la historia de la compañia -->
+            <li class="par">Historia</li>
+        </a>
+        <a href="Contactenos.html">
+            <!-- link a contáctenos -->
+            <li class="impar">Contáctenos</li>
+        </a>
+        <a href="Mapa.html">
+            <!-- link al mapa del sitio -->
+            <li class="par">Mapa Del Sitio</li>
+        </a>
+        <a href="Referencias.html">
+            <!-- link a las referencias -->
+            <li class="impar">Referencias</li>
+        </a>
+    </ul>
+    <!-- aquí empieza la división de menú que abre y cierra el menú para pantallas menores a 780px -->
+    <div class="mmovil">Menu
+        <!-- se crea el icono del menú, que permite una animación cuando se abre y cierra -->
+        <div class="menuIcon">
+            <!-- las tres divisones representan cada línae del icono -->
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </div>
+</nav>
+<!-- subtitulo principal de la página que explica qué contenido tiene -->
+<h2 class="subindex" id="inicio">Mapa</h2>
+<div class="contenido2">
+   <!-- imagen del mapa que se creo en draw.io -->
+    <img class="mapa" src="../Imagenes/mapa.png" alt="mapa del sitio de MALU inmobiliaria">
+</div>
+<!-- link que manda al inicio de las páginas, el id inicio está en el elemento de clase mmmovil, que es el último antes del contenido -->
+<p class="ainicio" id="abajo"><a href="#inicio">Volver al inicio</a></p>
+<!-- el footer de la página que da información sobre cómo contactar y manda a las redes sociales -->
+<footer>
+    <!-- los iconos son importados de la hoja de iconos referenciada en el head -->
+    <p>Para mayor información acerca de los inmuebles, o para publicar algún inmueble por favor dirigirse a <a href="Contactenos.html" class=contactenos>contáctenos</a> o vaya a nuestras redes sociales
+        <!-- icono de facebook -->
+        <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+        <!-- icono de twitter -->
+        <a href="https://www.twitter.com/" class="fa fa-twitter"></a>
+        <!-- icono de whatsapp -->
+        <a href="Contactenos.html" class="fa fa-whatsapp"></a>
+    </p>
+</footer>
+<!-- scripts que permiten la animación de despliegue del menú -->
+<script>
+    $('.mmovil').on('click', function() {
+        $('nav ul').toggleClass('mostrar');
+        $('.menuIcon').toggleClass('close');
+    });
+
+</script>
+
+</html>

@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel|Lobster|Lora');
+
+/* estilos generales para todo el cuerpo de los html */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Lobster";
+    background-color: black;
+}
+
+
+/* el header va aser constante para todos los html */
+
+header {
+    background-color: #ffff33;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+/* se especifica el color base del titulo, basicamente para el símbolo de marca registrada */
+
+#MALU {
+    color: black;
+}
+
+
+/* se definen las propiedades que tendrán las letras del título */
+
+#MALU strong {
+    padding: 0 2px;
+    font-size: 250%;
+}
+
+
+/* cada letra tiene un id diferente para que se les pueda cambiar el color de manera independiente */
+
+#M {
+    color: crimson;
+}
+
+#A {
+    color: darkgreen;
+}
+
+#L {
+    color: darkorange;
+}
+
+#U {
+    color: blue;
+}
+
+
+/* se hace que los links no tengan la decoración usual */
+
+a {
+    color: ghostwhite;
+    text-decoration: none;
+}
+
+
+/* se pone el color de la barra de navegación para que concuerde con el fondo */
+
+nav ul {
+    background-color: black;
+    /* en caso de que el tamaño exceda su margen, oculta el elemento */
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    /* se ponen las carácterísticas que hacen que se vea mejor, el transition para cada tipo de navegador es para que la animacion funcione */
+    -webkit-transition: max-height 0.8s;
+    -ms-transition: max-height 0.8s;
+    -moz-transition: max-height 0.8s;
+    -o-transition: max-height 0.8s;
+    transition: max-height 0.8s;
+}
+
+nav ul li {
+    /* se usa para que el padding esté dentro del tamaño */
+    box-sizing: content-box;
+    /* se usa para que los elementos se pongan en línea */
+    display: inline-flex;
+    /* se pone un margen constante arriba y abajo pero un porcentaje para que reaccione a los cambios de tamaño en los lados */
+    padding: 20px 3.2%;
+}
+
+nav ul li:hover {
+    /* cuando pase por encima de un link cambia de color toda la caja */
+    background-color: rgba(6, 13, 178, 0.5);
+}
+
+
+/* estilo para el menú que se oculta en pantallas grandes y sale en pequeñas */
+
+.mmovil {
+    width: 100%;
+    color: ghostwhite;
+    box-sizing: border-box;
+    padding: 15px;
+    cursor: pointer;
+    background-color: rgba(6, 13, 178, 1);
+    /* display se pone none para que no se vea */
+    display: none;
+}
+
+.menuIcon {
+    /* este es el icono, hecho con divs y puesto a la derecha de la página */
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    float: right;
+    padding-right: 10px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    /* se usan los valores de em para que sea más fácil cambiar los tamaños relativos */
+    width: 1.2em;
+    height: 0.2em;
+    background-color: ghostwhite;
+    margin: 0.2em 0 0;
+    transition: 0.4s;
+}
+
+
+/* aniamción de las tres barras a la hora de hacer click sobre el bloque de menú, se siguen usando las medias em */
+
+.close .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-0.3em, 0.2em);
+    transform: rotate(-45deg) translate(-0.3em, 0.2em);
+}
+
+.close .bar2 {
+    opacity: 0;
+}
+
+.close .bar3 {
+    -webkit-transform: rotate(45deg) translate(-0.35em, -0.25em);
+    transform: rotate(45deg) translate(-0.35em, -0.25em);
+}
+
+h2 {
+    /* estilos para el subtitulo de cada pagína, que será constante para todas */
+    font-family: "Cinzel", cursive;
+    color: ghostwhite;
+    width: 100%;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+
+/* contenido es el div general que contiene lo importante de la página, por eso siempre es centrado y cubre el 100% */
+
+.contenido {
+    margin: 0 auto;
+    width: 100%;
+    align-content: center;
+}
+
+
+/* estilos de los enlaces, en el contenido */
+
+.contenido a {
+    list-style: none;
+    text-align: center;
+    /* esto implica que el tamño será 1.5 veces más grande */
+    font-size: 1.5em;
+    padding: 20px 25px;
+}
+
+.contenido a:hover {
+    /* se usa el mismo color para el hover */
+    color: darkblue;
+}
+
+.contenido p {
+    /* estilo para  todos los prrafos del contenido, ya que se usa siempre la misma clase para el contenido */
+    color: ghostwhite;
+    text-align: center;
+    padding: 1.5em auto;
+}
+
+.contenido2 {
+    /* tipo de contenido específico para el mapa */
+    margin: 0 auto;
+    width: 100%;
+    align-content: center;
+    background-color: rgba(255, 140, 0, 0.75);
+}
+
+.contenido2 .mapa {
+    /* usando la clase del mapa yla división específica es posible cambiar el color de fondo y el tamaño de la imagen para que esta se vea */
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    align-self: center;
+    margin: 0 auto;
+    color: darkorange;
+}
+
+.historia {
+    /* historia es un tipo diferente de parrafo con más texto que los otros */
+    font-size: 0.9em;
+    color: ghostwhite;
+    font-family: "Lora";
+    text-align: justify;
+    margin: 0 auto;
+    padding: 20px 10%;
+}
+
+.sector {
+    /* sector son las divisiones dentro del contenido, que permiten posicionar objetos de manera general */
+    box-sizing: border-box;
+    display: inline-flex;
+    /* se usa el porcentaje para que cambie de tamaño a medida que cambia la página */
+    width: 24.5%;
+    height: 30em;
+    padding: 25px;
+    /* se usa esto par que las esquinas sean redondeadas */
+    border-radius: 25px;
+    background-color: rgba(255, 140, 0, 0.5);
+}
+
+.sector:hover {
+    /* se añade un estado de hover con un el mismo color pero menos trasnparente, para notar que se está pasando */
+    background-color: rgba(255, 140, 0, 0.75);
+}
+
+.sector p {
+    /* parrafo dentro de los sectores, con letra más grande */
+    display: flex;
+    align-self: center;
+    margin: auto;
+    font-size: 300%;
+    color: darkblue;
+    font-family: "Cinzel";
+}
+
+.sector img {
+    /* para que la imagen llene toda la división y no se haga más grande */
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* contenido para cada apartamento, sigue los conceptos de contenido y de sector, pero es una división intermedia y toca volver a declarar su estilo */
+
+.contenido .apto {
+    width: 100%;
+    height: auto;
+}
+
+.contenido .apto .sector {
+    width: 49.5%;
+}
+
+.contenido .apto .sector p {
+    font-size: 100%
+}
+
+.ainicio a {
+    /* enlace que dirige al inicio de la página en todas las páginas, es de un color visible para que resalte pero que sea armónico */
+    text-decoration: underline;
+    color: darkorange;
+    font-size: 0.85em;
+    padding: 10px;
+}
+
+
+/* se declaran los estilos del pie de página que será constante en todso los archivos html */
+
+footer {
+    width: 100%;
+    background-color: #ffff33;
+    align-self: baseline;
+}
+
+footer p {
+    font-size: 0.75em;
+    color: darkgrey;
+    padding: 10px 20px;
+}
+
+footer p a {
+    text-decoration: underline;
+    color: darkgrey;
+}
+
+footer p a:hover {
+    color: darkblue;
+}
+
+@media screen and (max-width: 780px) {
+    /* condicional para cuando la pantalla mide menso de 780p, se hacen más pequños los textos y el menú de navegación desparece de la vista, para darle paso al elemento de menu que hará la animación de abrir la navegación, también se cambian algunos efectos de hover para notar más le efecto  */
+    #MALU strong {
+        font-size: 200%;
+    }
+    nav ul {
+        max-height: 0;
+    }
+    .mostrar {
+        max-height: 20em;
+    }
+    nav ul li {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 15px;
+        text-align: left;
+    }
+    nav ul li:hover {
+        background-color: black;
+    }
+    /* se declararon unos links pares y otros impares para tener un hover alternado de color */
+    .par:hover {
+        color: rgba(221, 30, 30, 0.75);
+    }
+    .impar:hover {
+        color: rgba(7, 160, 19, 0.75);
+    }
+    .mmovil {
+        display: block;
+    }
+    /* hace que los secotores ahora solo ocupen la mitad del espacio de la página para una lectura más fácil */
+    .sector {
+        width: 49.5%;
+        margin-bottom: 5px;
+        height: 25em;
+    }
+    .contenido .apto .sector {
+        width: 100%;
+    }
+    .contenido .apto .sector p {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* condicional cuando la pantalla mide menos de 480px, se cambian los tamaños de las letras a unos más pequños respecto a su tamaño previo y se hace que los sectores que contienen la ifnormación llenen completamente el ancho, para una navegación más amable */
+    header {
+        font-size: 0.8em;
+    }
+    h2 {
+        font-size: 1.5em;
+        padding: 1.0em 0;
+    }
+    .sector {
+        width: 99%;
+    }
+}
